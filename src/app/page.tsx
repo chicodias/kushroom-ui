@@ -11,7 +11,7 @@ import {
   Badge,
   Row,
 } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
+import { TeamSection } from "@/components/TeamSection";
 import { gallery } from "@/app/resources/content";
 import { Hero } from "@/components/Hero";
 import { baseURL, routes } from "@/app/resources";
@@ -32,23 +32,7 @@ export async function generateMetadata() {
 export default function Home() {
   const bgSrc = gallery.images[0].src;
   return (
-    <Column
-      maxWidth="m"
-      gap="xl"
-      horizontal="center"
-      style={{
-        backgroundImage: `url(${baseURL}${bgSrc})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        // give it some padding so you actually see the bg behind text
-        padding: "2rem 1rem",
-        // ensure the text contrasts
-        color: "white",
-        // relative/zIndex to stack above anything
-        position: "relative",
-        zIndex: 1,
-      }}
-    >
+    <Column maxWidth="m" gap="m" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -62,7 +46,7 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column fillWidth paddingY="24" gap="m">
+      <Column fillWidth gap="m">
         <Hero />
       </Column>
       {routes["/blog"] && (
@@ -77,6 +61,7 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
+      <TeamSection />
       {/* <Projects range={[2]} /> */}
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
