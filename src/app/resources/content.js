@@ -1,25 +1,25 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Kushroom",
+  lastName: "OG",
   get name() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName}`;
   },
-  role: "Design Engineer",
+  role: "",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "kushroomog@gmail.com",
+  location: "America/Sao_Paulo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  display: false,
+  title: <>Inscreva-se em nosso Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and share thoughts on the
+      intersection of creativity and engineering.
     </>
   ),
 };
@@ -28,54 +28,59 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/kushroomog",
   },
   {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    name: "Youtube",
+    icon: "youtube",
+    link: "https://www.youtube.com/@SMITH-I",
   },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
+  // {
+  //   name: "X",
+  //   icon: "x",
+  //   link: "",
+  // },
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: `mailto:${"kushroomog@gmail.com"}`,
   },
 ];
 
 const home = {
   path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  image: "/images/avatar.jpg",
+  label: "Início",
+  title: `${person.name} – Label & Lifestyle`,
+  description: `Kushroom: label independente que une música e moda`,
+  headline: <>Estilo de vida, música e arte se encontram</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: (
+      <>
+        Projeto em destaque:{" "}
+        <strong className="ml-4">EP NEW WAVE THE SURF</strong>
+      </>
+    ),
+    href: "/blog/new-wave",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Bem-vindo à Kushroom, onde criamos roupas exclusivas
+      <br /> e lançamos sons que ditam tendências.
     </>
   ),
 };
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Sobre",
+  title: `Sobre a ${person.name}`,
+  description: `Conheça a Kushroom, label e marca de lifestyle`,
   tableOfContent: {
-    display: true,
+    display: false,
     subItems: false,
   },
   avatar: {
@@ -83,186 +88,149 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/kushroom",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Sobre a Kushroom",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        A Kushroom é uma gravadora independente sediada em Pirituba - São Paulo,
+        especializada em produção musical e moda urbana.
+        <br /> Nosso propósito é conectar arte, estilo de vida e cultura.
+        <br /> Agende uma sessão conosco!
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: false,
+    title: "Artistas",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "SMITH-I",
+        timeframe: "2024 – Presente",
+        role: "MC / Rapper",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            2018: integrou o Coletivo Cabelo Crespo ao lado de Gum Beats,
+            iniciando agenda intensa de shows e parcerias locais.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            2019–2021: cofundador do selo INSP MUSIC, elevando qualidade
+            artística e visibilidade de novos talentos.
+          </>,
+          <>
+            2021: fundou a gravadora Favela No Auge, consolidando-se como voz
+            forte do underground.
+          </>,
+          <>
+            2024: uniu-se à Kushroom e ao produtor Marqueta, mesclando Trap,
+            RAP, Amapiano e outras vertentes.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        instagram: "oficialsmithi",
+        image: "/images/kush/smith.png",
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Marqueta",
+        timeframe: "2024 — Presente",
+        role: "Beatmaker / Produtor Musical",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Produções envolventes transitando pelo trap, incorporando elementos
+            de Afrobeat, funk, dub e música eletrônica.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Melodias ricas construídas com instrumentos e sintetizadores,
+            criando atmosferas imersivas.
+          </>,
+          <>
+            Cada faixa transporta o ouvinte a novas paisagens sonoras,
+            evidenciando versatilidade e identidade artística.
           </>,
         ],
-        images: [],
+        instagram: "marquetaksh",
+        image: "/images/kush/marqueta.jpg",
+      },
+      {
+        company: "Chico Dias",
+        timeframe: "2024 – Presente",
+        role: "Instrumentista / Produtor",
+        achievements: [
+          <>Atua como guitarrista na cena independente de SP desde 2009.</>,
+          <>2015: membro da banda À Margem (metal/rap).</>,
+          <>2019: arranjista no INSP Music / Coletivo Cabelo Crespo.</>,
+          <>2020: participou do Beco do Magrão em Poá/SP.</>,
+          <>Influências: MPB, Jazz, música latina.</>,
+        ],
+        instagram: "frdmiranda",
+        image: "/images/kush/chico.jpg",
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
+    display: false,
+    title: "Estudos",
+    institutions: [], // empty so TS sees the key
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
+    display: false,
+    title: "Serviços",
+    skills: [], // empty as well
   },
 };
 
 const blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "Editorial",
+  title: "Editorial",
+  description: `Fique por dentro dos lançamentos e projetos da Kushroom`,
 };
 
 const work = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  path: "/artistas",
+  label: "Artistas",
+  title: `Nossos talentos – ${person.name}`,
+  description: `Conheça os talentos da Kushroom`,
 };
+
+const horizontalImages = Array.from({ length: 6 }, (_, i) => ({
+  src: `/images/gallery/horizontal-${i + 1}.jpg`,
+  alt: `Kushroom Sessions ${i + 1}`,
+  orientation: "horizontal",
+}));
+
+const verticalImages = Array.from({ length: 6 }, (_, i) => ({
+  src: `/images/gallery/vertical-${i + 1}.jpg`,
+  alt: `Editorial Kushroom ${i + 1}`,
+  orientation: "vertical",
+}));
 
 const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  path: "/galleria",
+  label: "Galeria",
+  title: `Galeria – ${person.name}`,
+  description: `Campanhas de moda e clipes da Kushroom`,
+  images: (() => {
+    const result = [];
+    const pairs = Math.min(
+      Math.floor(horizontalImages.length / 2),
+      Math.floor(verticalImages.length / 2),
+    );
+    for (let i = 0; i < pairs; i++) {
+      result.push(
+        horizontalImages[2 * i],
+        verticalImages[2 * i],
+        verticalImages[2 * i + 1],
+        horizontalImages[2 * i + 1],
+      );
+    }
+    // append any leftovers
+    return [
+      ...result,
+      ...horizontalImages.slice(pairs * 2),
+      ...verticalImages.slice(pairs * 2),
+    ];
+  })(),
 };
-
 export { person, social, newsletter, home, about, blog, work, gallery };
