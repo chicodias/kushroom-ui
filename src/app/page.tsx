@@ -18,6 +18,7 @@ import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
+import { Projects } from "@/components/work/Projects";
 import { Meta, Schema } from "@/once-ui/modules";
 
 export async function generateMetadata() {
@@ -30,7 +31,6 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-  const bgSrc = gallery.images[0].src;
   return (
     <Column maxWidth="m" gap="m" horizontal="center">
       <Schema
@@ -53,7 +53,7 @@ export default function Home() {
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Últimos releases
+              Editoriais
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
@@ -61,8 +61,7 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <TeamSection />
-      {/* <Projects range={[2]} /> */}
+      <Projects range={[1]} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );

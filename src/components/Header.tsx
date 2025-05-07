@@ -17,7 +17,7 @@ type TimeDisplayProps = {
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({
   timeZone,
-  locale = "en-GB",
+  locale = "pt-BR",
 }) => {
   const [currentTime, setCurrentTime] = useState("");
 
@@ -99,37 +99,54 @@ export const Header = () => {
                 />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/about"] && (
+              {routes["/sobre"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="person"
-                    href="/about"
+                    href="/sobre"
                     label={about.label}
-                    selected={pathname === "/about"}
+                    selected={pathname === "/sobre"}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
-                    href="/about"
-                    selected={pathname === "/about"}
+                    href="/sobre"
+                    selected={pathname === "/sobre"}
                   />
                 </>
               )}
-              {routes["/work"] && (
+              {routes["/artistas"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="person"
+                    href="/artistas"
+                    label={about.label}
+                    selected={pathname === "/artistas"}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="person"
+                    href="/artistas"
+                    selected={pathname === "/artistas"}
+                  />
+                </>
+              )}
+              {routes["/projetos"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="grid"
-                    href="/work"
+                    href="/projetos"
                     label={work.label}
-                    selected={pathname.startsWith("/work")}
+                    selected={pathname.startsWith("/projetos")}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
-                    href="/work"
-                    selected={pathname.startsWith("/work")}
+                    href="/projetos"
+                    selected={pathname.startsWith("/projetos")}
                   />
                 </>
               )}
@@ -150,20 +167,20 @@ export const Header = () => {
                   />
                 </>
               )}
-              {routes["/gallery"] && (
+              {routes["/galeria"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="gallery"
-                    href="/gallery"
+                    href="/galeria"
                     label={gallery.label}
-                    selected={pathname.startsWith("/gallery")}
+                    selected={pathname.startsWith("/galeria")}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="gallery"
-                    href="/gallery"
-                    selected={pathname.startsWith("/gallery")}
+                    href="/galeria"
+                    selected={pathname.startsWith("/galeria")}
                   />
                 </>
               )}

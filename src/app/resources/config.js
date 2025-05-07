@@ -3,10 +3,11 @@ const baseURL = "https://kushroom.site";
 
 const routes = {
   "/": true,
-  "/about": true,
-  "/work": true,
+  "/artistas": true,
+  "/sobre": false,
+  "/projetos": true,
   "/blog": true,
-  "/gallery": true,
+  "/galeria": true,
 };
 
 // Enable password protection on selected routes

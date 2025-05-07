@@ -75,8 +75,8 @@ const home = {
 };
 
 const about = {
-  path: "/about",
-  label: "Sobre",
+  path: "/artistas",
+  label: "Artistas",
   title: `Sobre a ${person.name}`,
   description: `Conheça a Kushroom, label e marca de lifestyle`,
   tableOfContent: {
@@ -188,9 +188,16 @@ const blog = {
 };
 
 const work = {
+  path: "/projetos",
+  label: "Projetos",
+  title: `Projetos – ${person.name}`,
+  description: `Conheça os talentos da Kushroom`,
+};
+
+const artists = {
   path: "/artistas",
   label: "Artistas",
-  title: `Nossos talentos – ${person.name}`,
+  title: `Equipe Kushroom`,
   description: `Conheça os talentos da Kushroom`,
 };
 
@@ -207,7 +214,7 @@ const verticalImages = Array.from({ length: 6 }, (_, i) => ({
 }));
 
 const gallery = {
-  path: "/galleria",
+  path: "/galeria",
   label: "Galeria",
   title: `Galeria – ${person.name}`,
   description: `Campanhas de moda e clipes da Kushroom`,
@@ -233,4 +240,14 @@ const gallery = {
     ];
   })(),
 };
-export { person, social, newsletter, home, about, blog, work, gallery };
+export {
+  person,
+  social,
+  newsletter,
+  home,
+  about,
+  blog,
+  work,
+  gallery,
+  artists,
+};

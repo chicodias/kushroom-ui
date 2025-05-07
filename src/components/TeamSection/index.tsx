@@ -14,7 +14,7 @@ export function TeamSection() {
       {/* Avatares lado a lado */}
       <Flex flex={8} paddingX="20" wrap gap="m">
         {about.work.experiences.map((member) => (
-          <Link key={member.company} href="/work" passHref>
+          <Link key={member.company} href="/artistas" passHref>
             <Avatar
               src={member.image}
               size="l"
