@@ -12,12 +12,18 @@ export function TeamSection() {
         </Heading>
       </Flex>
       {/* Avatares lado a lado */}
-      <Flex flex={8} paddingX="20" wrap gap="m">
+      <Flex 
+        flex={8} 
+        paddingX={{ mobile: "8", tablet: "16", desktop: "20" }}
+        wrap 
+        gap={{ mobile: "s", tablet: "m" }}
+        justifyContent={{ mobile: "center", tablet: "start" }}
+      >
         {about.work.experiences.map((member) => (
           <Link key={member.company} href="/artistas" passHref>
             <Avatar
               src={member.image}
-              size="l"
+              size={{ mobile: "m", tablet: "l" }}
               radius="full"
               style={{ cursor: "pointer" }}
             />
