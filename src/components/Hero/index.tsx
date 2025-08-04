@@ -15,7 +15,7 @@ import { home, about, person, gallery } from "@/app/resources/content";
 
 export function Hero() {
   // raw `/images/...` path works in dev and prod
-  const bgSrc = gallery.images[11].src;
+  const bgSrc = "/images/kush/hero.jpeg";
 
   return (
     <section
