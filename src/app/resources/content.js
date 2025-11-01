@@ -166,6 +166,19 @@ const about = {
         instagram: "frdmiranda",
         image: "/images/kush/chico.jpg",
       },
+      {
+        company: "Mossato",
+        timeframe: "2024 – Presente",
+        role:
+          "Engenheiro de Mix / Master • 3D • Audiovisual • Fotografia • Videomaker",
+        achievements: [
+          <>Engenheiro de mix e master na Kushroom, moldando identidade e punch.</>,
+          <>Atua em audiovisual: direção, captação e edição de clipes e sessions.</>,
+          <>Cria conteúdos em 3D e fotografia, integrando imagem e som na estética da label.</>,
+        ],
+        instagram: "mossato1400",
+        image: "/images/kush/mossato.jpg",
+      },
     ],
   },
   studies: {
