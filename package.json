@@ -11,11 +11,11 @@
   "dependencies": {
     "@floating-ui/react-dom": "^2.1.2",
     "@mdx-js/loader": "^3.1.0",
-    "@next/mdx": "^15.3.1",
+    "@next/mdx": "^15.4.5",
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
     "gray-matter": "^4.0.3",
-    "next": "^15.3.1",
+    "next": "^15.4.5",
     "next-mdx-remote": "^5.0.0",
     "next-share": "^0.27.0",
     "postcss": "^8.5.3",
@@ -36,10 +36,16 @@
     "@types/node": "^20.17.30",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.6",
-    "eslint": "^9.25.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^15.4.5",
     "postcss-custom-media": "^10.0.8",
     "postcss-flexbugs-fixes": "^5.0.2",
     "typescript": "^5.8.3"
+  },
+  "resolutions": {
+    "qs": "^6.14.1",
+    "brace-expansion": "^1.1.12",
+    "mdast-util-to-hast": "^13.2.1"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
